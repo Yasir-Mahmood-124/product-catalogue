@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import {
@@ -80,9 +80,8 @@ function SizeTable({ sizes }: { sizes: Product['sizes'] }) {
       {isDimensions && (
         <Box sx={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '4px 24px', alignItems: 'center' }}>
           {sizes.rows.map((row, i) => (
-            <>
+            <Fragment key={i}>
               <Typography
-                key={`label-${i}`}
                 sx={{
                   fontFamily: 'var(--font-lora), serif',
                   fontSize: '0.82rem',
@@ -93,7 +92,6 @@ function SizeTable({ sizes }: { sizes: Product['sizes'] }) {
                 {row[0]}
               </Typography>
               <Typography
-                key={`val-${i}`}
                 sx={{
                   fontFamily: 'var(--font-lora), serif',
                   fontSize: '0.82rem',
@@ -104,7 +102,7 @@ function SizeTable({ sizes }: { sizes: Product['sizes'] }) {
               >
                 {row[1]}
               </Typography>
-            </>
+            </Fragment>
           ))}
         </Box>
       )}
@@ -246,13 +244,15 @@ function ProductModal({
           >
             {/* Main image */}
             <Box sx={{ position: 'relative', flex: 1, minHeight: { xs: 280, md: 400 } }}>
-              <Image
-                src={product.images[imgIndex]}
-                alt={`${product.name} — image ${imgIndex + 1}`}
-                fill
-                style={{ objectFit: 'contain', padding: '16px' }}
-                sizes="(max-width: 900px) 100vw, 50vw"
-              />
+              {product.images[imgIndex] && (product.images[imgIndex] as { src?: string }).src !== '' && (
+                <Image
+                  src={product.images[imgIndex]}
+                  alt={`${product.name} — image ${imgIndex + 1}`}
+                  fill
+                  style={{ objectFit: 'contain', padding: '16px' }}
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              )}
 
               {total > 1 && (
                 <>
@@ -358,8 +358,6 @@ function ProductModal({
           <Box
             sx={{
               p: { xs: 3, md: 4 },
-              overflowY: 'auto',
-              maxHeight: { md: '95vh' },
               display: 'flex',
               flexDirection: 'column',
               gap: 3,

@@ -138,6 +138,9 @@ import apron2 from '@/Images/bagsCanvasAccessories/canvasAprons/Apron-2.jpg';
 import apron3 from '@/Images/bagsCanvasAccessories/canvasAprons/Apron-3.jpg';
 import apron4 from '@/Images/bagsCanvasAccessories/canvasAprons/Apron-4.jpg';
 
+import handleBag1a from '@/Images/bagsCanvasAccessories/handleBags/handle_bag_1.png';
+import handleBag2a from '@/Images/bagsCanvasAccessories/handleBags/handle_bag_2.jpg';
+
 // ─── Types ─────────────────────────────────────────────────────────────────
 export type SizeSpec = {
   label?: string;
@@ -760,6 +763,50 @@ export const categories: Category[] = [
             ['Width',        '70 cm'],
             ['Neck Strap',   '19 cm'],
             ['Waist Straps', '95 cm'],
+          ],
+        },
+      },
+      {
+        id: 'handle-bag-cvc',
+        name: 'Handle Bag — CVC Canvas',
+        teaser: '425 gsm CVC canvas, cotton web handles, embroidered logo',
+        material: 'CVC Canvas (60% cotton, 40% polyester) in 425 GSM weight, natural colour.',
+        design: 'Cotton web handles 2.5 cm wide × 17 cm long, embroidered logo.',
+        usage: 'Shopping, gifting, promotional, and everyday carry.',
+        description:
+          'Handle bag crafted from CVC Canvas — 60% cotton and 40% polyester — at 425 GSM for a sturdy, long-lasting build. Features cotton web handles 2.5 cm wide with a 17 cm length for comfortable hand carry, and an embroidered logo for a premium finish. Made in natural canvas colour. Custom colours and styles can be developed as per customer requirements.',
+        images: [handleBag1a],
+        sizes: {
+          label: 'BAG SIZE',
+          columns: ['Measurement', 'Size'],
+          rows: [
+            ['Length',        '38 cm'],
+            ['Width',         '43 cm'],
+            ['Depth',         '14 cm'],
+            ['Handle Length', '17 cm'],
+            ['Handle Width',  '2.5 cm'],
+          ],
+        },
+      },
+      {
+        id: 'handle-bag-cotton',
+        name: 'Handle Bag — Cotton Canvas',
+        teaser: '300 gsm pure cotton canvas, cotton web handles, logo options',
+        material: '100% cotton canvas in 300 GSM weight, natural colour.',
+        design: 'Cotton web handles 2.5 cm wide × 28 cm long, printed or embroidered logo available.',
+        usage: 'Shopping, gifting, promotional, and everyday carry.',
+        description:
+          'Handle bag made from 100% cotton canvas at 300 GSM, offering a lightweight yet durable natural carry solution. Cotton web handles are 2.5 cm wide with a generous 28 cm length for easy hand or over-the-wrist carry. Printed and embroidered logo options can be developed as per customer requirements. Made in natural canvas colour. Custom colours and styles are available.',
+        images: [handleBag2a],
+        sizes: {
+          label: 'BAG SIZE',
+          columns: ['Measurement', 'Size'],
+          rows: [
+            ['Length',        '35 cm'],
+            ['Width',         '33 cm'],
+            ['Depth',         '14 cm'],
+            ['Handle Length', '28 cm'],
+            ['Handle Width',  '2.5 cm'],
           ],
         },
       },

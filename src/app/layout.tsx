@@ -20,7 +20,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'Historical Military Surplus | Heritage Craftsmanship',
+  title: 'Khaimah Enterprises',
   description:
     'Authentic historical clothing, canvas tents, and military surplus accessories — faithfully reproduced for reenactors, collectors, and the field.',
 };
