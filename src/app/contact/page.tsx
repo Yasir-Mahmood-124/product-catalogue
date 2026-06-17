@@ -48,19 +48,19 @@ const contactDetails = [
   {
     icon: <EmailIcon sx={{ color: '#B8922A', fontSize: '1.15rem', mt: '2px', flexShrink: 0 }} />,
     label: 'Email',
-    value: 'info@example.com',
-    href: 'mailto:info@example.com',
+    value: 'Khaimahpk@gmail.com',
+    href: 'mailto:Khaimahpk@gmail.com',
   },
   {
     icon: <PhoneIcon sx={{ color: '#B8922A', fontSize: '1.15rem', mt: '2px', flexShrink: 0 }} />,
     label: 'Phone',
-    value: '+1 (000) 000-0000',
-    href: 'tel:+10000000000',
+    value: '03138612346',
+    href: 'tel:+923138612346',
   },
   {
     icon: <LocationOnIcon sx={{ color: '#B8922A', fontSize: '1.15rem', mt: '2px', flexShrink: 0 }} />,
-    label: 'Location',
-    value: 'United Kingdom',
+    label: 'Address',
+    value: '105-C Small Industrial Estate, Sialkot, Pakistan — 51480',
     href: null,
   },
 ];

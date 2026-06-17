@@ -8,6 +8,7 @@ import NextLink from 'next/link';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import type { SxProps, Theme } from '@mui/material/styles';
@@ -26,18 +27,23 @@ const quickLinks = [
 const contactItems = [
   {
     icon: <EmailIcon sx={{ fontSize: '1rem', color: '#B8922A', mt: '2px', flexShrink: 0 }} />,
-    label: 'info@example.com',
-    href: 'mailto:info@example.com',
+    label: 'Khaimahpk@gmail.com',
+    href: 'mailto:Khaimahpk@gmail.com',
   },
   {
     icon: <PhoneIcon sx={{ fontSize: '1rem', color: '#B8922A', mt: '2px', flexShrink: 0 }} />,
-    label: '+1 (000) 000-0000',
-    href: 'tel:+10000000000',
+    label: '03138612346',
+    href: 'tel:+923138612346',
   },
   {
     icon: <WhatsAppIcon sx={{ fontSize: '1rem', color: '#B8922A', mt: '2px', flexShrink: 0 }} />,
     label: 'WhatsApp Us',
-    href: 'https://wa.me/10000000000',
+    href: 'https://wa.me/923138612346',
+  },
+  {
+    icon: <LocationOnIcon sx={{ fontSize: '1rem', color: '#B8922A', mt: '2px', flexShrink: 0 }} />,
+    label: '105-C Small Industrial Estate, Sialkot, Pakistan — 51480',
+    href: null,
   },
 ];
 
@@ -181,10 +187,12 @@ export default function Footer() {
           {contactItems.map((item) => (
             <Box
               key={item.label}
-              component="a"
-              href={item.href}
-              target={item.href.startsWith('http') ? '_blank' : undefined}
-              rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              component={item.href ? 'a' : 'div'}
+              {...(item.href ? {
+                href: item.href,
+                target: item.href.startsWith('http') ? '_blank' : undefined,
+                rel: item.href.startsWith('http') ? 'noopener noreferrer' : undefined,
+              } : {})}
               sx={{
                 display: 'flex',
                 alignItems: 'flex-start',
